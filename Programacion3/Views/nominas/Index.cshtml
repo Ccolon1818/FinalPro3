@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Programacion3.Models.nomina>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montoTotal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.año)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montoTotal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_nomina }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_nomina }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_nomina })
+        </td>
+    </tr>
+}
+
+</table>

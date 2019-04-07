@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,9 +134,59 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\cargosController.cs" />
+    <Compile Include="Controllers\departamentosController.cs" />
+    <Compile Include="Controllers\empleadosController.cs" />
+    <Compile Include="Controllers\entradaEmpleadosController.cs" />
+    <Compile Include="Controllers\licenciasController.cs" />
+    <Compile Include="Controllers\nominasController.cs" />
+    <Compile Include="Controllers\permisosController.cs" />
+    <Compile Include="Controllers\salidaEmpleadoesController.cs" />
+    <Compile Include="Controllers\vacacionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cargos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\departamentos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\empleados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\entradaEmpleados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\licencias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\nomina.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\permisos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\salidaEmpleado.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vacaciones.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -141,8 +199,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -168,10 +243,54 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\cargos\Create.cshtml" />
+    <Content Include="Views\cargos\Delete.cshtml" />
+    <Content Include="Views\cargos\Details.cshtml" />
+    <Content Include="Views\cargos\Edit.cshtml" />
+    <Content Include="Views\cargos\Index.cshtml" />
+    <Content Include="Views\departamentos\Create.cshtml" />
+    <Content Include="Views\departamentos\Delete.cshtml" />
+    <Content Include="Views\departamentos\Details.cshtml" />
+    <Content Include="Views\departamentos\Edit.cshtml" />
+    <Content Include="Views\departamentos\Index.cshtml" />
+    <Content Include="Views\empleados\Create.cshtml" />
+    <Content Include="Views\empleados\Delete.cshtml" />
+    <Content Include="Views\empleados\Details.cshtml" />
+    <Content Include="Views\empleados\Edit.cshtml" />
+    <Content Include="Views\empleados\Index.cshtml" />
+    <Content Include="Views\entradaEmpleados\Create.cshtml" />
+    <Content Include="Views\entradaEmpleados\Delete.cshtml" />
+    <Content Include="Views\entradaEmpleados\Details.cshtml" />
+    <Content Include="Views\entradaEmpleados\Edit.cshtml" />
+    <Content Include="Views\entradaEmpleados\Index.cshtml" />
+    <Content Include="Views\licencias\Create.cshtml" />
+    <Content Include="Views\licencias\Delete.cshtml" />
+    <Content Include="Views\licencias\Details.cshtml" />
+    <Content Include="Views\licencias\Edit.cshtml" />
+    <Content Include="Views\licencias\Index.cshtml" />
+    <Content Include="Views\nominas\Create.cshtml" />
+    <Content Include="Views\nominas\Delete.cshtml" />
+    <Content Include="Views\nominas\Details.cshtml" />
+    <Content Include="Views\nominas\Edit.cshtml" />
+    <Content Include="Views\nominas\Index.cshtml" />
+    <Content Include="Views\permisos\Create.cshtml" />
+    <Content Include="Views\permisos\Delete.cshtml" />
+    <Content Include="Views\permisos\Details.cshtml" />
+    <Content Include="Views\permisos\Edit.cshtml" />
+    <Content Include="Views\permisos\Index.cshtml" />
+    <Content Include="Views\salidaEmpleadoes\Create.cshtml" />
+    <Content Include="Views\salidaEmpleadoes\Delete.cshtml" />
+    <Content Include="Views\salidaEmpleadoes\Details.cshtml" />
+    <Content Include="Views\salidaEmpleadoes\Edit.cshtml" />
+    <Content Include="Views\salidaEmpleadoes\Index.cshtml" />
+    <Content Include="Views\vacaciones\Create.cshtml" />
+    <Content Include="Views\vacaciones\Delete.cshtml" />
+    <Content Include="Views\vacaciones\Details.cshtml" />
+    <Content Include="Views\vacaciones\Edit.cshtml" />
+    <Content Include="Views\vacaciones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -185,6 +304,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
