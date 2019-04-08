@@ -138,6 +138,7 @@
     <Compile Include="Controllers\departamentosController.cs" />
     <Compile Include="Controllers\empleadosController.cs" />
     <Compile Include="Controllers\entradaEmpleadosController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\licenciasController.cs" />
     <Compile Include="Controllers\nominasController.cs" />
     <Compile Include="Controllers\permisosController.cs" />
