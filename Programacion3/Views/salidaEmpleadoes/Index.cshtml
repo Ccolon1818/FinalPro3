@@ -4,24 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="tit">Salida de Empleados</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tipoSalida)
+            @Html.DisplayName("Tipo de Salida")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.motivo)
+            @Html.DisplayName("Motivo")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaSalida)
+            @Html.DisplayName("Fecha de Salida")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.empleados.codigoEmpleado)
+            @Html.DisplayName("ID Empleado")
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.empleados.codigoEmpleado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_salida }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_salida }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_salida })
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_salida }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_salida }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_salida })
         </td>
     </tr>
 }

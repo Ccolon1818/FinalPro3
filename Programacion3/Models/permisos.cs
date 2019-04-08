@@ -11,11 +11,14 @@ namespace Programacion3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class permisos
     {
         public int id_permiso { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> desde { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> hasta { get; set; }
         public string comentario { get; set; }
         public int id_empleado { get; set; }

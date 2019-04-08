@@ -1,17 +1,17 @@
 ﻿@model Programacion3.Models.licencias
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2 class="tit">Detalles</h2>
 
 <div>
-    <h4>licencias</h4>
+    <h4>Licencias</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.desde)
+            @Html.DisplayName("Desde")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.hasta)
+            @Html.DisplayName("Hasta")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.motivo)
+            @Html.DisplayName("Motivo")
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.comentarios)
+            @Html.DisplayName("Comentarios")
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.empleados.codigoEmpleado)
+            @Html.DisplayName("ID Empleado")
         </dt>
 
         <dd>
@@ -53,6 +53,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id_licencia }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_licencia }) |
+    @Html.ActionLink("Atras", "Index")
 </p>

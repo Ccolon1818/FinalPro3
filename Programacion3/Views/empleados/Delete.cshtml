@@ -1,18 +1,18 @@
 ﻿@model Programacion3.Models.empleados
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
 }
 
-<h2>Delete</h2>
+<h2 class="tit">Eliminar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta seguro de que desea eliminar empleado?</h3>
 <div>
-    <h4>empleados</h4>
+    <h4>Empleados</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.codigoEmpleado)
+            @Html.DisplayName("Codigo")
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.DisplayName("Nombre")
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.apellido)
+            @Html.DisplayName("Apellido")
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefono)
+            @Html.DisplayName("Telefono")
         </dt>
 
         <dd>
@@ -44,7 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaIngreso)
+            @Html.DisplayName("Fecha de Ingreso")
         </dt>
 
         <dd>
@@ -52,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.salario)
+            @Html.DisplayName("Salario")
         </dt>
 
         <dd>
@@ -60,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estado)
+            @Html.DisplayName("Estado")
         </dt>
 
         <dd>
@@ -68,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.cargos.codigoCargo)
+            @Html.DisplayName("ID Cargo")
         </dt>
 
         <dd>
@@ -76,7 +76,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.departamentos.codigoDepartamento)
+            @Html.DisplayName("ID Departamento")
         </dt>
 
         <dd>
@@ -89,8 +89,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-primary" /> |
+            @Html.ActionLink("Atras", "Index")
         </div>
     }
 </div>

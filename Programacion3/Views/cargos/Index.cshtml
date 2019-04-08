@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Programacion3.Models.cargos>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cargo";
 }
 
-<h2 class="tit">Cargos</h2>
+<h2 class="tit">Cargo</h2>
 
 <p>
     @Html.ActionLink("Crear Nuevo", "Create")
@@ -30,8 +30,7 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.id_cargos }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.id_cargos }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_cargos })
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_cargos })
         </td>
     </tr>
 }

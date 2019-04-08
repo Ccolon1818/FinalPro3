@@ -11,11 +11,14 @@ namespace Programacion3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class vacaciones
     {
         public int id_vacaciones { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> desde { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> hasta { get; set; }
         public string año { get; set; }
         public string comentario { get; set; }

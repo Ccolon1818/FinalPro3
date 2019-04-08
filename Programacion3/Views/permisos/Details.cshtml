@@ -1,17 +1,17 @@
 ﻿@model Programacion3.Models.permisos
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2 class="tit">Detalles</h2>
 
 <div>
-    <h4>permisos</h4>
+    <h4>Permisos</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.desde)
+            @Html.DisplayName("Desde")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.hasta)
+            @Html.DisplayName("Hasta")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.comentario)
+            @Html.DisplayName("Comentario")
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.empleados.codigoEmpleado)
+            @Html.DisplayName("ID Empleado")
         </dt>
 
         <dd>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id_permiso }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_permiso }) |
+    @Html.ActionLink("atras", "Index")
 </p>

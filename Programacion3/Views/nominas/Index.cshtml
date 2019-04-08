@@ -1,30 +1,21 @@
 ﻿@model IEnumerable<Programacion3.Models.nomina>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Nomina";
 }
 
-<h2>Index</h2>
+<h2 class="tit">Nomina</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<form asp-action="Buscar" method="post">
-    <div class="form-actions no-color d-flex justify-content-between" style=" border:solid; border-radius:5px; border-width:2px; padding:0.6px">
-        <input type="text" name="nomina" value="" class="form-control" placeholder="Buscar nomina">
-        <input type="submit" value="Buscar" class="btn btn-outline-primary form-control" />
-    </div>
-</form>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.año)
+            @Html.DisplayName("Año")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.mes)
+            @Html.DisplayName("Mes")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.montoTotal)
+            @Html.DisplayName("Monto Total")
         </th>
         <th></th>
     </tr>
@@ -41,9 +32,7 @@
             @Html.DisplayFor(modelItem => item.montoTotal)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_nomina }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_nomina }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_nomina })
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_nomina })
         </td>
     </tr>
 }

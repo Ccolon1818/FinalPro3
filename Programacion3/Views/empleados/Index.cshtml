@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Programacion3.Models.empleados>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Empleados";
 }
 
-<h2>Index</h2>
+<h2 class="tit">Empleados</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 
 <table class="table">
@@ -34,10 +34,10 @@
             @Html.DisplayName("Estado")
         </th>
         <th>
-            @Html.DisplayName("C-Cargo")
+            @Html.DisplayName("ID-Cargo")
         </th>
         <th>
-            @Html.DisplayName("C-Dep")
+            @Html.DisplayName("ID-Dep")
         </th>
         <th></th>
     </tr>
@@ -73,9 +73,9 @@
                 @Html.DisplayFor(modelItem => item.departamentos.codigoDepartamento)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
             </td>
         </tr>
     }

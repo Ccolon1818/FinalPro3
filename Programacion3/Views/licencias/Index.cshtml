@@ -1,30 +1,30 @@
 ﻿@model IEnumerable<Programacion3.Models.licencias>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Licencias";
 }
 
-<h2>Index</h2>
+<h2 class="tit">Licencias</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.desde)
+            @Html.DisplayName("Desde")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.hasta)
+            @Html.DisplayName("Hsta")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.motivo)
+            @Html.DisplayName("Motivo")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.comentarios)
+            @Html.DisplayName("Comentarios")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.empleados.codigoEmpleado)
+            @Html.DisplayName("ID Empleado")
         </th>
         <th></th>
     </tr>
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.empleados.codigoEmpleado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_licencia }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_licencia }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_licencia })
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_licencia }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_licencia }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_licencia })
         </td>
     </tr>
 }

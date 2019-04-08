@@ -1,17 +1,17 @@
 ﻿@model Programacion3.Models.nomina
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
-    <h4>nomina</h4>
+    <h4>Nomina</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.año)
+            @Html.DisplayName("Año")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.mes)
+            @Html.DisplayName("Mes")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.montoTotal)
+            @Html.DisplayName("Monto Total")
         </dt>
 
         <dd>
@@ -37,6 +37,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id_nomina }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Atras", "Index")
 </p>

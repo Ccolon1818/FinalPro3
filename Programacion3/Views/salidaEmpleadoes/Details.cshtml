@@ -1,17 +1,17 @@
 ﻿@model Programacion3.Models.salidaEmpleado
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2 class="tit">Detalles</h2>
 
 <div>
-    <h4>salidaEmpleado</h4>
+    <h4>Salida de Empleado</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.tipoSalida)
+            @Html.DisplayName("Tipo de Salida")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.motivo)
+            @Html.DisplayName("Motivo")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaSalida)
+            @Html.DisplayName("Fecha de Salida")
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.empleados.codigoEmpleado)
+            @Html.DisplayName("ID Empleado")
         </dt>
 
         <dd>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id_salida }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_salida }) |
+    @Html.ActionLink("Atras", "Index")
 </p>
