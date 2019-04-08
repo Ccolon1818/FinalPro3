@@ -20,6 +20,20 @@ namespace Programacion3.Controllers
             return View(db.nomina.ToList());
         }
 
+        public ActionResult Buscar(string nomina)
+        {
+
+            var algo = from h in db.nomina select h;
+
+            if (!String.IsNullOrEmpty(nomina))
+            {
+
+                algo = algo.Where(x => x.año.Contains(nomina) || x.mes.Contains(nomina));
+            }
+
+            return View(algo);
+        }
+
         // GET: nominas/Details/5
         public ActionResult Details(int? id)
         {

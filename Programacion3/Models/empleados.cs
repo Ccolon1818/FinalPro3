@@ -11,7 +11,8 @@ namespace Programacion3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class empleados
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,6 +30,7 @@ namespace Programacion3.Models
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string telefono { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaIngreso { get; set; }
         public Nullable<int> salario { get; set; }
         public string estado { get; set; }
