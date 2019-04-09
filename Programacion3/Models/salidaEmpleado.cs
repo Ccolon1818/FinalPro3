@@ -11,12 +11,14 @@ namespace Programacion3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class salidaEmpleado
     {
         public int id_salida { get; set; }
         public string tipoSalida { get; set; }
         public string motivo { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaSalida { get; set; }
         public int id_empleado { get; set; }
     
