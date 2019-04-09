@@ -10,6 +10,13 @@
     @Html.ActionLink("Crear nuevo", "Create")
 </p>
 
+<form asp-action="Buscar" method="post">
+    <div class="form-actions no-color d-flex justify-content-between" style=" border:solid; border-radius:5px; border-width:2px; padding:0.6px">
+        <input type="text" name="buscar" value="" class="form-control" placeholder="Buscar nomina">
+        <input type="submit" value="Buscar" class="btn btn-outline-primary form-control" />
+    </div>
+</form>
+
 <table class="table">
     <tr>
         <th>

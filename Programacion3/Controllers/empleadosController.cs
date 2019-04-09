@@ -21,6 +21,20 @@ namespace Programacion3.Controllers
             return View(empleados.ToList());
         }
 
+        public ActionResult Buscar(string buscar)
+        {
+            var algo = from h in db.empleados select h;
+
+            if (!String.IsNullOrEmpty(buscar))
+            {
+
+                algo = algo.Where(x => x.nombre.Contains(buscar) || x.apellido.Contains(buscar));
+            }
+
+            return View(algo);
+
+        }
+
         // GET: empleados/Details/5
         public ActionResult Details(int? id)
         {
